@@ -17,6 +17,7 @@ c = [80,10,10,80] # Damping constant HSC,LSC, LSR, HSR
 c = [10,10,10,10] # Damping constant HSC,LSC, LSR, HSR
 #c = [1,1,40,25] # Damping constant HSC,LSC, LSR, HSR
 
+shaftL = 50 # shaft length
 k = 60 # Stiffness of the spring
 m = 90 # Mass
 F = 3000 # Force
@@ -52,7 +53,7 @@ for k in range(N+1):
     if x1[k] < 0:
         x1[k],x2[k] = 0,0
     if x1[k] > 50:
-        x1[k],x2[k] = 50,0
+        x1[k],x2[k] = shaftL,0
         
     if x2[k] > HSLS:#HSC
         
